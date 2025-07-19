@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: terabox-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: API_ID
+        value: 1
+      - key: API_HASH
+        value: 
+      - key: BOT_TOKEN
+        value: 7120527421:AAEgfETAyOEuN2a8dGScXNwIrXxIwCqyjyw
