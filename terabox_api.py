@@ -5,10 +5,10 @@ def get_direct_link(terabox_url):
         api_url = "https://terabox-api.vercel.app/api"
         response = requests.get(api_url, params={"link": terabox_url})
         if response.status_code == 200:
-            data = response.json()
-            return data['data'][0]['dlink']
-        else:
-            return None
+            result = response.json()
+            if "data" in result:
+                return result['data'][0]['dlink']
+        return None
     except Exception as e:
-        print("Error:", e)
+        print(f"[ERROR] Terabox API: {e}")
         return None
