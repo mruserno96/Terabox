@@ -16,7 +16,7 @@ async def handle_link(client, message):
     link = message.text.strip()
 
     # Convert 1024terabox.com to terabox.com
-    link = link.replace("1024terabox.com", "terabox.com")
+    link = link.replace("1024terabox.com","terabox.club","terabox.com")
 
     if "terabox.com" not in link:
         await message.reply("⚠️ Please send a valid Terabox link.")
